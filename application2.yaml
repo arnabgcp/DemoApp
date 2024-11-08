@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1 
+kind: ApplicationSet
+metadata:
+  name: myapp
+  namespace: argocd
+spec:
+  generators:
+  - list: 
+      # The template below uses these parameters
+      elements: 
+      - cluster: development
+        url: https://kubernetes.default.svc
+      - cluster: production
+        url: https://34.57.36.45
+  template: 
+    # inserts cluster and url values from parameters defined above
+    metadata:
+      name: '{{cluster}}-myapp'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/arnabgcp/DemoApp.git
+        targetRevision: HEAD
+        path: dev/apps
+      destination:
+        server: '{{url}}'
+        namespace: myapp
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+        automated:
+          selfHeal: true
+          prune: true
