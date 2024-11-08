@@ -8,9 +8,9 @@ spec:
   - list: 
       # The template below uses these parameters
       elements: 
-      - cluster: development
+      - cluster: cluster-1
         url: https://kubernetes.default.svc
-      - cluster: production
+      - cluster: cluster-2
         url: https://34.57.36.45
   template: 
     # inserts cluster and url values from parameters defined above
@@ -37,7 +37,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: demo-services
   namespace: argocd
 spec:
   project: default
