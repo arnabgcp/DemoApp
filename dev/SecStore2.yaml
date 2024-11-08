@@ -5,7 +5,7 @@ metadata:
 spec:
   provider:
     vault:
-      server: "http://34.118.231.216"
+      server: "http://34.41.158.124:8200"
       path: "secret"
       # Version is the Vault KV secret engine version.
       # This can be either "v1" or "v2", defaults to "v2"
@@ -14,5 +14,5 @@ spec:
         # points to a secret that contains a vault token
         # https://www.vaultproject.io/docs/auth/token
         kubernetes:
-          mountPath: "cluster1"
+          mountPath: "kubernetes"
           role: "demo"
