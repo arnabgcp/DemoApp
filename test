@@ -1,0 +1,1 @@
+vault write auth/kubernetes/config kubernetes_host=https://34.135.120.187

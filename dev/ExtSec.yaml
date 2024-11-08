@@ -1,0 +1,22 @@
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: my-credentials
+spec:
+  refreshInterval: "15s"
+  secretStoreRef:
+    name: vault-backend
+    kind: ClusterSecretStore
+  target:
+    name: my-credentials
+    template:
+      engineVersion: v2
+      data:
+        credentials: |
+          my_con="{{ .my_url }}"
+       
+  data:
+  - secretKey: my_url
+    remoteRef:
+      key: my_cred
+      property: url

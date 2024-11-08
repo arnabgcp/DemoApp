@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: us-east1-docker.pkg.dev/ardent-case-441007-d8/demoapp/app:v5
+
+        volumeMounts:
+        - name: mysec
+          mountPath: "/secrets"
+          readOnly: true 
+
+      volumes:
+      - name: mysec
+        secret:
+          secretName: my-credentials
