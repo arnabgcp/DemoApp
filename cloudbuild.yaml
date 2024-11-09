@@ -10,3 +10,7 @@ steps:
   - -c
   - |
     docker push us-east1-docker.pkg.dev/$PROJECT_ID/demoapp/app:$SHORT_SHA
+
+
+options:
+  logging: CLOUD_LOGGING_ONLY
