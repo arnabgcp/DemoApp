@@ -12,5 +12,28 @@ steps:
     docker push us-east1-docker.pkg.dev/$PROJECT_ID/demoapp/app:$SHORT_SHA
 
 
+#### This step generates the new manifest ####
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: /bin/sh
+  secretEnv: ['GIT_ACCESS_TOKEN']
+  args:
+  - '-c'
+  - |
+    git clone https://arnabgcp:$$GIT_ACCESS_TOKEN@https://github.com/arnabgcp/DemoApp.git
+    echo "Updating image tag version ..."
+    cd dev/depl
+    prev=`cat appdepl.yaml | grep app:| grep image| awk -F":" '{print $NF}'`
+    sed "s/${prev}/${SHORT_SHA}/g" > appdepl.yaml
+    echo "Pushing changes to k8s manifest repo ..."
+    git config --global user.name "<github-user>"
+    git config --global user.email "<github-email>"
+    git add -A
+    git commit -m "[Cloud Builder] Updated image tag "
+    git push https://arnabgcp:$$GIT_ACCESS_TOKEN@https://github.com/arnabgcp/DemoApp.git
+availableSecrets:
+  secretManager:
+  - versionName: projects/$PROJECT_NUMBER/secrets/github-access-token/versions/latest
+    env: 'GIT_ACCESS_TOKEN'
+
 options:
   logging: CLOUD_LOGGING_ONLY
