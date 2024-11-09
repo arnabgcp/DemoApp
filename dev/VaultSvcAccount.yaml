@@ -14,6 +14,6 @@ roleRef:
   kind: ClusterRole
   name: system:auth-delegator
 subjects:
-- kind: ServiceAccount
+- kind: ServiceAccount  
   name: vault-auth
   namespace: default

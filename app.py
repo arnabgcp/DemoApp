@@ -1,9 +1,21 @@
 from flask import Flask
+import subprocess
 app = Flask(__name__)
 
 @app.route('/')
 def hello_geek():
-    return '<h1>Hello from Flask & Docker 4</h2>'
+    host = str(subprocess.check_output('hostname'))
+    retstr = '<h1>From host ' + host + '</h1>' 
+    return retstr
+    
+@app.route('/getsec')
+def hello_sec():
+    try:
+     secret = str(subprocess.check_output("cat //home/arnabpsl23/app/Doc*", shell=True))
+     return "<h1>From vault secret : " + secret + "</h1>" 
+    except:
+     secret = "Secret not found"
+     return secret
 
 
 if __name__ == "__main__":
