@@ -19,7 +19,7 @@ steps:
   args:
   - '-c'
   - |
-    git clone https://arnabgcp:$$GIT_ACCESS_TOKEN@github.com/arnabgcp/DemoApp.git
+    git clone https://arnabgcp:$$GIT_ACCESS_TOKEN@github.com/arnabgcp/DemoApp.git -b main
     echo "Updating image tag version ..."
     cd dev/depl
     prev=`cat appdepl.yaml | grep app:| grep image| awk -F":" '{print $3}'`
