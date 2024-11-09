@@ -1,5 +1,12 @@
-vault write auth/cluster-2/config \
-     token_reviewer_jwt="$SA_JWT_TOKEN" \
-     kubernetes_host="$K8S_HOST" \
-     kubernetes_ca_cert="$SA_CA_CRT" \
-     issuer="https://kubernetes.default.svc.cluster.local"
+#### Building Docker Image ####
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'us-east1-docker.pkg.dev/$PROJECT_ID/demoapp/app:$SHORT_SHA', 'apps' ]
+
+#### Pushing Docker Image ####
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: /bin/sh
+  args: 
+  - -c
+  - |
+    docker push us-east1-docker.pkg.dev/$PROJECT_ID/demoapp/app:$SHORT_SHA
