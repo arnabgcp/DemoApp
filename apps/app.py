@@ -11,7 +11,7 @@ def hello_geek():
 @app.route('/getsec')
 def hello_sec():
     try:
-     secret = str(subprocess.check_output("cat /secret/*", shell=True))
+     secret = str(subprocess.check_output("cat /secrets/*", shell=True))
      return "<h1>From vault secret : " + secret + "</h1>" 
     except:
      secret = "Secret not found"
