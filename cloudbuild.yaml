@@ -29,7 +29,7 @@ steps:
     git config --global user.email "<github-email>"
     git add -A
     git commit -m "[Cloud Builder] Updated image tag "
-    git push https://arnabgcp:$$GIT_ACCESS_TOKEN@github.com/arnabgcp/DemoApp.git
+    git push https://arnabgcp:$$GIT_ACCESS_TOKEN@github.com/arnabgcp/DemoApp.git main
 availableSecrets:
   secretManager:
   - versionName: projects/$PROJECT_NUMBER/secrets/github-access-token/versions/latest
