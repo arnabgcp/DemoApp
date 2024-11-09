@@ -22,8 +22,8 @@ steps:
     git clone https://arnabgcp:$$GIT_ACCESS_TOKEN@https://github.com/arnabgcp/DemoApp.git
     echo "Updating image tag version ..."
     cd dev/depl
-    prev=`cat appdepl.yaml | grep app:| grep image| awk -F":" '{print $NF}'`
-    sed "s/${prev}/${SHORT_SHA}/g" > appdepl.yaml
+    prev=`cat appdepl.yaml | grep app:| grep image| awk -F":" '{print $3}'`
+    sed -i "s/${prev}/${SHORT_SHA}/g" appdepl.yaml
     echo "Pushing changes to k8s manifest repo ..."
     git config --global user.name "<github-user>"
     git config --global user.email "<github-email>"
