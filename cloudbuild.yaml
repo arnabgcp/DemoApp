@@ -1,5 +1,5 @@
-
-gcloud container fleet ingress enable \
-    --config-membership=cluster-1 \
-    --location=us-central1 \
-    --project=ardent-case-441007-d8
+vault write auth/cluster-2/config \
+     token_reviewer_jwt="$SA_JWT_TOKEN" \
+     kubernetes_host="$K8S_HOST" \
+     kubernetes_ca_cert="$SA_CA_CRT" \
+     issuer="https://kubernetes.default.svc.cluster.local"
