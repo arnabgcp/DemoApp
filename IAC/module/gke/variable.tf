@@ -1,25 +1,25 @@
 variable "project" {
-  type    = string
+  type = string
 }
 
 variable "loc" {
-  type    = string
+  type = string
 }
 
 
 variable "name" {
-  type    = string
+  type = string
 }
 
 
 
 
 variable "network" {
-  type    = string
+  type = string
 }
 
 variable "subnetwork" {
-  type    = string
+  type = string
 }
 
 variable "nodecount" {

@@ -1,12 +1,12 @@
 variable "project" {
-  type    = string
+  type = string
 }
 
 variable "region_pri" {
-  type    = string
+  type = string
 }
 
 
 variable "region_sec" {
-  type    = string
+  type = string
 }
