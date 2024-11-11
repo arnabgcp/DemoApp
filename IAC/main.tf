@@ -10,7 +10,7 @@ project="ardent-case-441007-d8"
 }
 
 
-module "gke2"{
+module "gke"{
 
 source = "./module/gke"
 loc = "us-east1-b"
@@ -25,7 +25,7 @@ master_ipvr = "10.0.5.0/28"
 }
 
 
-module "gke"{
+module "gke2"{
 
 source = "./module/gke"
 loc = "us-west1-a"
