@@ -25,3 +25,7 @@ variable "subnetwork" {
 variable "nodecount" {
   type = number
 }
+
+variable "master_ipvr" {
+  type = string
+}

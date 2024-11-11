@@ -20,6 +20,8 @@ subnetwork = module.network.useast
 project="ardent-case-441007-d8"
 nodecount = 2
 
+master_ipvr = "10.0.5.0/28"
+
 }
 
 
@@ -33,4 +35,5 @@ subnetwork = module.network.uswest
 project="ardent-case-441007-d8"
 nodecount = 1
 
+master_ipvr = "10.0.4.0/28"
 }

@@ -26,7 +26,7 @@ resource "google_container_cluster" "primary" {
     enable_private_nodes = true
 
 
-     master_ipv4_cidr_block = "10.0.3.0/28"
+     master_ipv4_cidr_block = var.master_ipvr
   }
 master_authorized_networks_config {
   
