@@ -10,8 +10,3 @@ terraform {
     bucket = "terraform-backend-ardent-case-441007-d8"
   }
 }
-
-provider "google" {
-  project = var.project
-
-}
