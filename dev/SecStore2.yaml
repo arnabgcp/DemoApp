@@ -5,7 +5,7 @@ metadata:
 spec:
   provider:
     vault:
-      server: "http://34.173.104.133:8200"
+      server: "http://35.184.38.79:8200"
       path: "secret"
       # Version is the Vault KV secret engine version.
       # This can be either "v1" or "v2", defaults to "v2"
