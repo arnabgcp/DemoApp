@@ -124,7 +124,12 @@ to access resources such as the GKE cluster.
    - kubectl config get-contexts
    - argocd cluster <2nd member cluster>
    - kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/applicationset/v0.3.0/manifests/install.yaml ( This is for ArgoCD multi cluster deployment )
-  
+
+
+  CICD Architecute 
+
+  ![image](https://github.com/user-attachments/assets/12b3b092-815d-4254-9083-42ab59f9c356)
+
 
 ## Configuring the private GKE clusters
 
