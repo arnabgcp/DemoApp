@@ -1,7 +1,7 @@
+
 module "network" {
 
   source = "./module/networks"
-
   region_pri = "us-east1"
   region_sec = "us-central1"
   project    = "ardent-case-441007-d8"
