@@ -2,13 +2,15 @@ steps:
   - id: 'terraform init'
     name: 'hashicorp/terraform:1.0.0'
     script: terraform init
+    dir: IAC/
   - id: 'terraform plan'
     name: 'hashicorp/terraform:1.0.0'
     script: terraform plan
+    dir: IAC/
   - id: 'terraform apply'
     name: 'hashicorp/terraform:1.0.0'
     script: terraform apply --auto-approve
-
+    dir: IAC/
 
 options:
   logging: CLOUD_LOGGING_ONLY
