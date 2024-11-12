@@ -2,7 +2,7 @@
 
 # Google Cloud Platform environment setup and deploy modern application
 
-The following example shows how you can set up a [Google Kubernetes Engine (GKE) cluster](https://cloud.google.com/kubernetes-engine/) and [Cloud SQL DB](https://cloud.google.com/sql) with terraform where modern aplication will be deployed and then set up an automated CI/CD pipeline using [Google Cloud Build](https://cloud.google.com/cloud-build/) for regular enhancements
+The following example shows how you can set up a multi cluster [Google Kubernetes Engine (GKE) cluster](https://cloud.google.com/kubernetes-engine/) integrated with vault with terraform where modern aplication will be deployed and then set up an automated CI/CD pipeline using [Google Cloud Build](https://cloud.google.com/cloud-build/) and ArgoCD ( GitOps ) for regular enhancements
 
 ## What is Google Cloud Build?
 
