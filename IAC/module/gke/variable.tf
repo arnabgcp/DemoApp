@@ -29,3 +29,7 @@ variable "nodecount" {
 variable "master_ipvr" {
   type = string
 }
+
+variable "shell" {
+  type = string
+}

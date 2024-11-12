@@ -3,8 +3,8 @@ output "useast" {
 }
 
 
-output "uswest" {
-  value = google_compute_subnetwork.uswest_subnet.id
+output "uscen" {
+  value = google_compute_subnetwork.uscen_subnet.id
 }
 
 output "network" {

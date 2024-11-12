@@ -31,10 +31,61 @@ resource "google_container_cluster" "primary" {
   master_authorized_networks_config {
 
     cidr_blocks {
-      cidr_block   = "34.124.210.227/32"
+      cidr_block   = var.shell
       display_name = "my-shell"
     }
 
+    cidr_blocks {
+      cidr_block   = "10.208.0.0/14"
+      display_name = "pod-cluster-1"
+    }
+
+    cidr_blocks {
+      cidr_block   = "10.12.0.0/14"
+      display_name = "pod-cluster-2"
+    }
+
+    cidr_blocks {
+      cidr_block   = "34.73.55.32/32"
+      display_name = "argocd"
+    }
+
+    cidr_blocks {
+      cidr_block   = "10.0.1.0/24"
+      display_name = "node-1"
+    }
+
+    cidr_blocks {
+      cidr_block   = "10.0.2.0/24"
+      display_name = "node-2"
+    }
+
+    cidr_blocks {
+      cidr_block   = "34.118.224.0/20"
+      display_name = "services"
+    }
+
+    cidr_blocks {
+      cidr_block   = "10.128.0.57/32"
+      display_name = "vm-inter-ip"
+    }
+  cidr_blocks {
+      cidr_block   = "35.184.38.79/32"
+      display_name = "vm-exter-ip"
+    }
+
+    cidr_blocks {
+      cidr_block   = "35.237.133.64/32"
+      display_name = "nat-1"
+    }
+
+    cidr_blocks {
+      cidr_block   = "34.57.51.77/32"
+      display_name = "nat-2"
+    }
+
+    
+    
   }
 
 
