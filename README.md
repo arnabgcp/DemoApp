@@ -187,6 +187,7 @@ Please add below policy under default in vault
      
 Now our deployment should be ready and below is the application architecture
 
+![image](https://github.com/user-attachments/assets/f9230bc2-4920-4db6-a49e-9ee2f95a890f)
 
 
 
