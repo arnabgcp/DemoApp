@@ -22,8 +22,9 @@ In this guide we will walk through the steps necessary to set up a GKE cluster, 
 1. [Install the necessary tools](#installing-necessary-tools)
 1. [Configure GKE cluster and deploy code](#Configure-GKE-cluster-and-deploy-code)
 1. [Configure Cloud Build](#configuring-cloud-build)
-1. [Trigger a build by pushing changes to GIT Repository](#triggering-a-build)
-1. [View the deployment on a GKE cluster](#viewing-the-deployment)
+1. [Configuring ArgoCD](#Configuring-ArgoCD)
+1. [Configuring the private GKE clusters](#Configuring-the-private-GKE-clusters)
+1. [Vault integration with the private GKE clusters](#Vault-integration-with-the-private-GKE-clusters)   
 
 ## Installing necessary tools
 
