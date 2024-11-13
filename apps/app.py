@@ -17,6 +17,10 @@ def hello_sec():
      secret = "Secret not found"
      return secret
 
+@app.route('/health')
+def hello_geek():
+    return "healthy"
+
 
 if __name__ == "__main__":
     app.run(debug=True)
