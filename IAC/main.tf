@@ -20,7 +20,7 @@ module "gke" {
   project     = "ardent-case-441007-d8"
   nodecount   = 2
   master_ipvr = "10.0.5.0/28"
-  shell = "34.142.144.232/32"
+  shell = "34.124.173.126/32"
 
 }
 
@@ -35,5 +35,5 @@ module "gke2" {
   project     = "ardent-case-441007-d8"
   nodecount   = 1
   master_ipvr = "10.0.4.0/28"
-  shell = "34.142.144.232/32"
+  shell = "34.124.173.126/32"
 }

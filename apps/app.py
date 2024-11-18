@@ -18,7 +18,7 @@ def hello_sec():
      return secret
 
 @app.route('/health')
-def hello_geek():
+def hello_health():
     return "healthy"
 
 

@@ -16,6 +16,18 @@ spec:
       - name: myapp
         image: us-east1-docker.pkg.dev/ardent-case-441007-d8/demoapp/app:280b8b5
 
+        readinessProbe:
+          tcpSocket:
+            port: 5000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+
+        livenessProbe:
+          tcpSocket:
+            port: 5000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+
         volumeMounts:
         - name: mysec
           mountPath: "/secrets"
