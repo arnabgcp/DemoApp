@@ -36,17 +36,17 @@ resource "google_container_cluster" "primary" {
     }
 
     cidr_blocks {
-      cidr_block   = "35.237.133.64/32"
+      cidr_block   = "35.184.251.249/32"
       display_name = "nat-1"
     }
 
     cidr_blocks {
-      cidr_block   = "34.57.51.77/32"
+      cidr_block   = "34.139.119.212/32"
       display_name = "nat-2"
     }
 
     cidr_blocks {
-      cidr_block   = "35.184.38.79/32"
+      cidr_block   = "34.172.217.232/32"
       display_name = "vault-vm"
     }
     

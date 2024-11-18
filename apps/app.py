@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_geek():
     host = str(subprocess.check_output('hostname'))
-    retstr = '<h1>From host ' + host + '</h1>' 
+    retstr = '<h1>From host :' + host + ' Check secrets with /getsec </h1>' 
     return retstr
     
 @app.route('/getsec')
