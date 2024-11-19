@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: us-east1-docker.pkg.dev/ardent-case-441007-d8/demoapp/app:78724b7
+        image: us-east1-docker.pkg.dev/ardent-case-441007-d8/demoapp/app:e82b9b8
 
         readinessProbe:
           tcpSocket:
